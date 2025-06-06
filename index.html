@@ -438,40 +438,51 @@
             transform: scale(1.1) rotate(2deg);
         }
 
-        /* Safety Section */
-        .safety-section {
+        /* Charts Section */
+        .charts-section {
             background: #0a0a0a;
         }
 
-        .safety-grid {
+        .chart-container {
+            max-width: 1000px;
+            margin: 0 auto 40px auto;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .chart-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
+            gap: 30px;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .safety-item {
+        .stat-item {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 20px;
             border: 1px solid #333;
             transition: all 0.3s;
+            background: rgba(255,255,255,0.02);
         }
 
-        .safety-item:hover {
+        .stat-item:hover {
             border-color: #fff;
             background: rgba(255,255,255,0.05);
+            transform: translateY(-5px);
         }
 
-        .safety-item .emoji {
+        .stat-emoji {
             font-size: 3rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: block;
         }
 
-        .safety-item p {
+        .stat-item p {
             font-size: 1.2rem;
-            font-weight: 300;
+            font-weight: 600;
+            letter-spacing: 0.02em;
         }
 
         /* Join Section */
@@ -870,22 +881,28 @@
         </div>
     </section>
 
-    <!-- Safety Section -->
-    <section class="safety-section section">
+    <!-- Charts Section -->
+    <section class="charts-section section">
         <div class="container">
-            <h2 class="section-title">🧼 Safety Briefing</h2>
-            <div class="safety-grid">
-                <div class="safety-item">
-                    <span class="emoji">🔐</span>
-                    <p>Protect your seed</p>
+            <h2 class="section-title">📊 CHAD Analytics</h2>
+            <div class="chart-container">
+                <style>#dexscreener-embed{position:relative;width:100%;padding-bottom:125%;}@media(min-width:1400px){#dexscreener-embed{padding-bottom:65%;}}#dexscreener-embed iframe{position:absolute;width:100%;height:100%;top:0;left:0;border:0;}</style>
+                <div id="dexscreener-embed">
+                    <iframe src="https://dexscreener.com/solana/D4kddc3gPEDxeE7TuA3uev5ovUxP2q3VuBY2CWnwhcvR?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"></iframe>
                 </div>
-                <div class="safety-item">
-                    <span class="emoji">🙅‍♂️</span>
-                    <p>No bundlers allowed</p>
+            </div>
+            <div class="chart-stats">
+                <div class="stat-item">
+                    <span class="stat-emoji">🚀</span>
+                    <p>CHAD Price Goes Up</p>
                 </div>
-                <div class="safety-item">
-                    <span class="emoji">🧼</span>
-                    <p>Degen responsibly</p>
+                <div class="stat-item">
+                    <span class="stat-emoji">📈</span>
+                    <p>Bundle Prices Go Down</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-emoji">💎</span>
+                    <p>Diamond Hands Only</p>
                 </div>
             </div>
         </div>
@@ -970,7 +987,7 @@
         }, observerOptions);
 
         // Observe all sections
-        document.querySelectorAll('.manifesto-item, .safety-item, .war-list li').forEach(el => {
+        document.querySelectorAll('.manifesto-item, .stat-item, .war-list li').forEach(el => {
             observer.observe(el);
         });
     </script>
