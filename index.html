@@ -472,22 +472,56 @@
             width: 100%;
         }
 
-        .report-link {
-            display: inline-block;
+        .report-badge {
             margin-top: 60px;
+            display: inline-block;
+        }
+
+        .report-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: transparent;
+            border: 2px solid #fff;
+            padding: 15px 30px;
             color: #fff;
             text-decoration: none;
             font-size: 1rem;
+            font-weight: 700;
             letter-spacing: 0.05em;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #fff;
-            transition: all 0.3s;
-            opacity: 0.7;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
         }
 
         .report-link:hover {
-            opacity: 1;
+            background: #fff;
+            color: #000;
             transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+        }
+
+        .report-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .report-link:hover .report-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .report-text {
+            flex: 1;
+        }
+
+        .report-arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .report-link:hover .report-arrow {
+            transform: translateX(5px);
         }
 
         /* Decorative Elements */
@@ -808,7 +842,13 @@
                 <a href="https://x.com/Onechadvs100" class="social-button">🐦 X / Twitter</a>
                 <a href="https://pump.fun/coin/7ogGKyjEdfdQm1ebBG339V6uzzprQiFPhnqCLixfpump" class="social-button" target="_blank">🔥 Buy $CHAD</a>
             </div>
-            <a href="#" class="report-link">🚨 Report a scammy bundle</a>
+            <div class="report-badge">
+                <a href="https://mcgruff.org/" target="_blank" class="report-link">
+                    <span class="report-icon">🚨</span>
+                    <span class="report-text">Report a Scammy Crime</span>
+                    <span class="report-arrow">→</span>
+                </a>
+            </div>
         </div>
     </section>
 
