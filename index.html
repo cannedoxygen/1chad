@@ -167,6 +167,27 @@
         /* War Section */
         .war-section {
             background: #0a0a0a;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .war-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('image.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .war-section .container {
+            position: relative;
+            z-index: 1;
         }
 
         .war-content {
@@ -616,19 +637,28 @@
             <h2 class="section-title">🧠 The Manifesto</h2>
             <div class="manifesto-grid">
                 <div class="manifesto-item">
-                    <p>Seed phrases are sacred</p>
+                    <p>Jeets get rekt, CHADs get checks</p>
                 </div>
                 <div class="manifesto-item">
-                    <p>No DMs</p>
+                    <p>"Ser wen marketing?" = instant ban</p>
                 </div>
                 <div class="manifesto-item">
-                    <p>No bundle launchers allowed</p>
+                    <p>Bundle launchers eat crayons</p>
                 </div>
                 <div class="manifesto-item">
-                    <p>We fight scammers, not holders</p>
+                    <p>Scammers' moms buy our dips</p>
                 </div>
                 <div class="manifesto-item">
-                    <p>Meme hard, launch harder</p>
+                    <p>DM = Definitely Moronic</p>
+                </div>
+                <div class="manifesto-item">
+                    <p>Rug pullers still use Internet Explorer</p>
+                </div>
+                <div class="manifesto-item">
+                    <p>1 CHAD > 100 jeet bundles</p>
+                </div>
+                <div class="manifesto-item">
+                    <p>We don't pump, we CHAD</p>
                 </div>
             </div>
         </div>
@@ -645,6 +675,10 @@
                 <div class="meme-item"><img src="4.png" alt="Chad Meme 4"></div>
                 <div class="meme-item"><img src="5.png" alt="Chad Meme 5"></div>
                 <div class="meme-item"><img src="6.png" alt="Chad Meme 6"></div>
+                <div class="meme-item"><img src="7.png" alt="Chad Meme 7"></div>
+                <div class="meme-item"><img src="8.png" alt="Chad Meme 8"></div>
+                <div class="meme-item"><img src="9.png" alt="Chad Meme 9"></div>
+                <div class="meme-item"><img src="10.png" alt="Chad Meme 10"></div>
             </div>
         </div>
     </section>
