@@ -229,6 +229,27 @@
         /* Manifesto Section */
         .manifesto-section {
             background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .manifesto-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('9.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        
+        .manifesto-section .container {
+            position: relative;
+            z-index: 1;
         }
 
         .manifesto-grid {
@@ -433,7 +454,7 @@
             background: #000;
             border: 2px solid #fff;
             padding: 20px 40px;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             gap: 20px;
             cursor: pointer;
@@ -443,7 +464,7 @@
             width: 100%;
             max-width: 800px;
             margin: 0 auto;
-            justify-content: space-between;
+            justify-content: center;
         }
 
         .ca-badge:hover {
@@ -608,7 +629,6 @@
     <section class="ca-section">
         <div class="container">
             <div class="ca-badge" onclick="copyCA()">
-                <span class="ca-label">CONTRACT ADDRESS</span>
                 <span class="ca-address" id="ca-address">7ogGKyjEdfdQm1ebBG339V6uzzprQiFPhnqCLixfpump</span>
                 <span class="ca-icon">📋</span>
             </div>
@@ -677,7 +697,6 @@
                 <div class="meme-item"><img src="6.png" alt="Chad Meme 6"></div>
                 <div class="meme-item"><img src="7.png" alt="Chad Meme 7"></div>
                 <div class="meme-item"><img src="8.png" alt="Chad Meme 8"></div>
-                <div class="meme-item"><img src="9.png" alt="Chad Meme 9"></div>
                 <div class="meme-item"><img src="10.png" alt="Chad Meme 10"></div>
             </div>
         </div>
@@ -709,8 +728,8 @@
         <div class="container">
             <h2 class="section-title">💬 Join the Army</h2>
             <div class="social-buttons">
-                <a href="https://t.me/your_telegram" class="social-button">📱 Telegram</a>
-                <a href="https://x.com/your_twitter" class="social-button">🐦 X / Twitter</a>
+                <a href="https://t.me/fuckbundles" class="social-button">📱 Telegram</a>
+                <a href="https://x.com/Onechadvs100" class="social-button">🐦 X / Twitter</a>
                 <a href="https://pump.fun/coin/7ogGKyjEdfdQm1ebBG339V6uzzprQiFPhnqCLixfpump" class="social-button" target="_blank">🔥 Buy $CHAD</a>
             </div>
             <a href="#" class="report-link">🚨 Report a scammy bundle</a>
