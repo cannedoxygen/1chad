@@ -117,6 +117,36 @@
             letter-spacing: 0.05em;
             margin-bottom: 10px;
             font-family: 'Arial Black', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-line-1,
+        .hero-line-3 {
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            display: block;
+        }
+
+        .hero-vs {
+            font-size: clamp(3rem, 12vw, 8rem);
+            text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
+            animation: wobble 2s ease-in-out infinite;
+            display: block;
+            color: #fff;
+        }
+
+        @keyframes wobble {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(-3deg) scale(1.05);
+            }
+            75% {
+                transform: rotate(3deg) scale(1.05);
+            }
         }
 
         .hero h2 {
@@ -725,8 +755,12 @@
     <section class="hero">
         <img src="hero.png" alt="CHAD Hero" class="hero-bg">
         <div class="hero-content">
-            <h1>🧱 1 CHAD vs 100 BUNDLES</h1>
-            <h2 style="font-size: clamp(2rem, 6vw, 5rem);">UNBUNDLE THE TRUTH</h2>
+            <h1>
+                <span class="hero-line-1">🧱 1 CHAD</span>
+                <span class="hero-vs">VS</span>
+                <span class="hero-line-3">100 BUNDLES</span>
+            </h1>
+            <h2 style="font-size: clamp(2rem, 6vw, 5rem); text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);">UNBUNDLE THE TRUTH</h2>
             <p class="subtext">A degen meme mission to destroy scammy launches, one .1 at a time.</p>
             <div class="cta-buttons">
                 <a href="https://pump.fun/coin/7ogGKyjEdfdQm1ebBG339V6uzzprQiFPhnqCLixfpump" class="cta-button" target="_blank">🔥 Buy $CHAD</a>
